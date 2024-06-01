@@ -1,7 +1,8 @@
-.weather {
+.infoTravelEvents {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 43%;
-  width: 96%;
+  height: 95%;
+  width: 48%;
 }
