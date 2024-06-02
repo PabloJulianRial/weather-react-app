@@ -3,7 +3,7 @@ import WeatherResponse from "../types/WeatherResponse";
 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 console.log("API Key:", apiKey);
-const baseUrl = "http://api.weatherapi.com/v1/current.json";
+const baseUrl = "https://api.weatherapi.com/v1/current.json";
 
 export const getUserLocation = (): Promise<GeolocationPosition> => {
   return new Promise((resolve, reject) => {
@@ -29,6 +29,8 @@ export async function fetchWeatherData(
         q: `${lat},${lon}`,
       },
     });
+    console.log(response);
+
     return response.data;
   } catch (error) {
     console.error("Error fetching weather data", error);
