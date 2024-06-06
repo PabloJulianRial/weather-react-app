@@ -1,14 +1,11 @@
 import "./Dashboard.scss";
 import Weather from "../weather/Weather";
 import Info from "../info/Info";
-import { ForecastResponse, WeatherResponse } from "../../types/WeatherResponse";
+import { useWeather } from "../../context/WeatherContext";
 
-type DashboardProps = {
-  currentWeather: WeatherResponse | null;
-  forecast: ForecastResponse | null;
-};
+const Dashboard = () => {
+  // const { currentWeather, forecast } = useWeather();
 
-const Dashboard = ({ currentWeather, forecast }: DashboardProps) => {
   return (
     <div className="dashboard">
       <Weather />

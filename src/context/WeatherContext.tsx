@@ -1,14 +1,23 @@
-import { useEffect, useState } from "react";
-import "./App.scss";
-import Dashboard from "./containers/dashboard/Dashboard";
+import React, { createContext, useState, useEffect, ReactNode } from "react";
 import {
   fetchWeatherData,
   fetchWeatherForecast,
   getUserLocation,
-} from "./utility/Utility";
-import { WeatherResponse, ForecastResponse } from "./types/WeatherResponse";
+} from "../utility/Utility";
+import { WeatherResponse, ForecastResponse } from "../types/WeatherResponse";
 
-const App = () => {
+interface WeatherContextProps {
+  currentWeather: WeatherResponse | null;
+  forecast: ForecastResponse | null;
+}
+
+const WeatherContext = createContext<WeatherContextProps | undefined>(
+  undefined
+);
+
+export const WeatherProvider: React.FC<{ children: ReactNode }> = ({
+  children,
+}) => {
   const [currentWeather, setCurrentWeather] = useState<WeatherResponse | null>(
     null
   );
@@ -37,10 +46,16 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
-      <Dashboard />
-    </div>
+    <WeatherContext.Provider value={{ currentWeather, forecast }}>
+      {children}
+    </WeatherContext.Provider>
   );
 };
 
-export default App;
+export const useWeather = () => {
+  const context = React.useContext(WeatherContext);
+  if (!context) {
+    throw new Error("useWeather must be used within a WeatherProvider");
+  }
+  return context;
+};
