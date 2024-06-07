@@ -1,4 +1,5 @@
 export type ForecastResponse = {
+  forecast: any;
   date: string;
   date_epoch: number;
   day: {

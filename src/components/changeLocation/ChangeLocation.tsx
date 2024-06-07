@@ -4,9 +4,9 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 const ChangeLocation = () => {
-  const mapContainerRef = useRef<HTMLDivElement>(null); // Explicitly define the type
-  const mapRef = useRef<L.Map | null>(null); // Explicitly define the type
-  const markerRef = useRef<L.Marker | null>(null); // Explicitly define the type
+  const mapContainerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<L.Map | null>(null);
+  const markerRef = useRef<L.Marker | null>(null);
 
   useEffect(() => {
     if (mapContainerRef.current && !mapRef.current) {
@@ -25,8 +25,6 @@ const ChangeLocation = () => {
       mapRef.current.on("click", function (e) {
         const lat = e.latlng.lat;
         const lng = e.latlng.lng;
-
-        markerRef.current?.setLatLng([lat, lng]); // Optional chaining for safety
 
         alert("Selected Coordinates: " + lat + ", " + lng);
       });
