@@ -6,10 +6,10 @@ import {
 } from "../utility/Utility";
 import { WeatherResponse, ForecastResponse } from "../types/WeatherResponse";
 
-interface WeatherContextProps {
+type WeatherContextProps = {
   currentWeather: WeatherResponse | null;
   forecast: ForecastResponse | null;
-}
+};
 
 const WeatherContext = createContext<WeatherContextProps | undefined>(
   undefined
@@ -41,7 +41,6 @@ export const WeatherProvider: React.FC<{ children: ReactNode }> = ({
   useEffect(() => {
     fetchData();
     const interval = setInterval(fetchData, 15 * 60 * 1000);
-
     return () => clearInterval(interval);
   }, []);
 
