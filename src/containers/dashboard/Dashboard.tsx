@@ -5,9 +5,11 @@ import { useWeather } from "../../context/WeatherContext";
 
 const Dashboard = () => {
   const { currentWeather, forecast } = useWeather();
+
   if (!currentWeather || !forecast) {
     return <div>Loading...</div>;
   }
+
   let greeting = "";
   const dayNumber = Number(currentWeather.location.localtime.slice(11, 13));
   if (dayNumber >= 6 && dayNumber < 12) {
@@ -19,7 +21,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="dashboard">
+    <div className={`dashboard `}>
       <h2 className="dashboard__greeting">
         Good {greeting} {}
       </h2>

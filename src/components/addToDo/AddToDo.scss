@@ -1,0 +1,17 @@
+.add-todo {
+  &__head {
+    margin: 0;
+    margin-bottom: 0.2rem;
+    color: green;
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+  }
+  &__input {
+    width: 80%;
+  }
+  &__button {
+    width: 20%;
+  }
+}

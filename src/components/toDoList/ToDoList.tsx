@@ -1,15 +1,10 @@
 import { useState } from "react";
 import "./ToDoList.scss";
-import React from "react";
 import ToDoMap from "../ToDoMap/ToDoMap";
-
-const initialTodos: Array<Todo> = [
-  { text: "walk the dog", complete: true },
-  { text: "do the shopping", complete: false },
-];
+import AddToDo from "../addToDo/AddToDo";
 
 const ToDoList = () => {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState<Array<Todo>>([]);
 
   const toggleTodo: ToggleTodo = (selectedTodo) => {
     const newTodos = todos.map((todo) => {
@@ -24,11 +19,22 @@ const ToDoList = () => {
     setTodos(newTodos);
   };
 
+  const removeTodo: RemoveTodo = (selectedTodo) => {
+    const newTodos = [...todos];
+    newTodos.splice(todos.indexOf(selectedTodo), 1);
+    setTodos(newTodos);
+  };
+
+  const addTodo = (newTodo: string) => {
+    if (newTodo !== "") {
+      setTodos([...todos, { text: newTodo, complete: false }]);
+    }
+  };
+
   return (
     <div className="todo-list">
-      <React.Fragment>
-        <ToDoMap todos={todos} toggleTodo={toggleTodo} />
-      </React.Fragment>
+      <AddToDo addTodo={addTodo} />
+      <ToDoMap todos={todos} toggleTodo={toggleTodo} removeTodo={removeTodo} />
     </div>
   );
 };

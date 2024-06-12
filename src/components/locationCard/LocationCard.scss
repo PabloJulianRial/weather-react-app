@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 2; /* Ensure content is above the background */
+    z-index: 2;
 
     > * {
       font-size: 21px;
@@ -37,7 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2; /* Ensure content is above the background */
+    z-index: 2;
 
     > * {
       font-size: 17px;
@@ -55,8 +55,28 @@
     background-image: url("../../assets/london.png");
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.2;
     border-radius: 10px;
     z-index: 1;
+  }
+  &__input {
+    margin: 0 auto;
+    width: 80%;
+    background-color: rgb(125, 155, 219);
+  }
+  &__change {
+    margin-right: 8px;
+    width: 10%;
+    font-size: 20px;
+  }
+}
+.location-card__image {
+  margin-top: 10px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
 }

@@ -2,7 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Dashboard from "./containers/dashboard/Dashboard";
 import ChangeLocation from "../src/components/changeLocation/ChangeLocation";
-import { WeatherProvider } from "./context/WeatherContext";
+import { WeatherProvider, useWeather } from "./context/WeatherContext";
+import { useState } from "react";
 
 const App = () => {
   return (

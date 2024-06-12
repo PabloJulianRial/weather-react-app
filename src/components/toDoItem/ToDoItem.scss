@@ -1,5 +1,22 @@
 .toDo-item {
   display: flex;
+  border-bottom: 1px solid rgb(80, 80, 162);
+  &__li {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    width: 90%;
+    align-items: center;
+  }
+  &__p {
+    width: 10%;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(166, 14, 14);
+  }
+  &__input {
+    margin-right: 5px;
+  }
 }
 
 .complete {
