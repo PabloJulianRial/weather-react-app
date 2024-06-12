@@ -2,11 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import EventCard from "../../components/eventCard/EventCard";
 import { useWeather } from "../../context/WeatherContext";
+
 import "./Events.scss";
 
 const Events = () => {
   const { currentWeather, forecast } = useWeather();
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<Events[]>([]);
 
   useEffect(() => {
     if (!currentWeather || !forecast) {
