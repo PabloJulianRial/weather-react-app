@@ -1,12 +1,14 @@
 @use "../../styles/variables" as *;
 
 .button {
+  width: 10px;
+  height: 10px;
   outline: none;
   border: none;
   border-radius: 10px;
   font-weight: 600;
   color: $color-white;
   cursor: pointer;
-  padding: 1rem;
+  padding: 3px;
   background-color: $color-primary-light;
 }
