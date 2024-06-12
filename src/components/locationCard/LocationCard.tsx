@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import "./LocationCard.scss";
 import { useWeather } from "../../context/WeatherContext";
 import { getmonthOfTheYear } from "../../utility/Utility";
@@ -55,6 +55,7 @@ const LocationCard = () => {
       fetchPlacePhoto(photoReference);
     }
   };
+  console.log(imageUrl);
 
   const fetchPlacePhoto = async (photoReference: string) => {
     const apiKey = "AIzaSyAinljVXrdyKQB_h0OUtd15is_MjgKGunk";
