@@ -12,10 +12,11 @@ export default defineConfig(({ mode }) => {
         env.REACT_APP_WEATHER_API_KEY
       ),
       "process.env.REACT_APP_TM_API_KEY": JSON.stringify(
-        env.REACT_APP_WEATHER_API_KEY
+        env.REACT_APP_TM_API_KEY
       ),
     },
     plugins: [react()],
+    base: "/weather-react-app/",
     server: {
       https: {
         key: fs.readFileSync(
