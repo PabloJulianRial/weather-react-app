@@ -13,14 +13,12 @@ const App = () => {
   return (
     <BrowserRouter basename="/weather-react-app">
       <div className="app">
-        <Router>
-          <WeatherProvider>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/change-location" element={<ChangeLocation />} />
-            </Routes>
-          </WeatherProvider>
-        </Router>
+        <WeatherProvider>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/change-location" element={<ChangeLocation />} />
+          </Routes>
+        </WeatherProvider>
       </div>
     </BrowserRouter>
   );
