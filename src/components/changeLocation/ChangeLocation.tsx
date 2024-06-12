@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import "./ChangeLocation.scss";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
