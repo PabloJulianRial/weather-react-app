@@ -1,4 +1,3 @@
-import ToDoItem from "../../components/toDoItem/ToDoItem";
 import ToDoList from "../../components/toDoList/ToDoList";
 import "./ToDo.scss";
 
