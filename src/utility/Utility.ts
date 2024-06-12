@@ -2,7 +2,7 @@ import axios from "axios";
 import { WeatherResponse, ForecastResponse } from "../types/WeatherResponse";
 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-console.log("API Key:", apiKey);
+
 const baseUrl = "https://api.weatherapi.com/v1/current.json";
 const baseUrl1 = "https://api.weatherapi.com/v1/forecast.json";
 
@@ -38,6 +38,7 @@ export async function fetchWeatherData(
     throw error;
   }
 }
+
 export async function fetchWeatherForecast(
   lat: number,
   lon: number,
