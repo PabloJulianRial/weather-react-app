@@ -11,7 +11,7 @@ import { WeatherProvider } from "./context/WeatherContext";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/Punk-API">
+    <BrowserRouter basename="/weather-react-app">
       <div className="app">
         <Router>
           <WeatherProvider>
