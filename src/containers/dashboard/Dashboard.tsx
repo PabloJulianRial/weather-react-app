@@ -11,7 +11,7 @@ const Dashboard = () => {
   }
   let backgroundClass = "";
   const condition = currentWeather.current.condition.text;
-  if (condition.includes("sun") || condition.includes("clear")) {
+  if (condition.includes("Sun") || condition.includes("clear")) {
     backgroundClass = "sunny";
   } else if (condition.includes("cloud") || condition.includes("rain")) {
     backgroundClass = "cloudy";

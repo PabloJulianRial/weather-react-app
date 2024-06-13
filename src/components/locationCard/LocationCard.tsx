@@ -30,9 +30,6 @@ const LocationCard = () => {
           {currentWeather.location.country}
         </div>
       </div>
-      <Link to={"/change-location"}>
-        <div className="location-card__change-location"></div>
-      </Link>
       <div className="location-card__links">
         <input className="location-card__input" type="text" />
         <p className="location-card__change">📍</p>

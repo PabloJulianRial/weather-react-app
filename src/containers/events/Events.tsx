@@ -35,12 +35,12 @@ const Events = () => {
           params: {
             classificationName: "music",
             latlong: `${lat},${lon}`,
-            radius: 20,
+            radius: 50,
             unit: "miles",
             startDateTime: startTime,
             endDateTime: endTime,
             apikey: apiKeyEvents,
-            size: 12,
+            size: 5,
           },
         });
         if (eventsResponse.data._embedded) {
