@@ -18,9 +18,13 @@ const Events = () => {
         const localtime = currentWeather.location.localtime;
         const startTime =
           localtime.slice(0, 10) + "T" + localtime.slice(11, 16) + ":00Z";
-        const endDate = new Date(localtime);
-        endDate.setDate(endDate.getDate() + 1);
-        const endTime = endDate.toISOString().slice(0, 19) + "Z";
+        const month = (Number(localtime.slice(8, 10)) + 7).toString();
+        const endTime =
+          localtime.slice(0, 8) +
+          month +
+          "T" +
+          localtime.slice(11, 16) +
+          ":00Z";
 
         const lat = currentWeather.location.lat;
         const lon = currentWeather.location.lon;
@@ -49,11 +53,12 @@ const Events = () => {
       }
     };
     fetchEvents();
+    console.log(events);
   }, [currentWeather, forecast]);
 
   return (
     <div className="events">
-      <h3 className="events__head">Near me</h3>
+      <h3 className="events__head">Concerts near me this week</h3>
 
       {events.map((event, index) => {
         const price =

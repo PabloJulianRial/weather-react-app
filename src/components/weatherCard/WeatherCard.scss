@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
   }
+
   &__links {
     height: 100%;
     display: flex;
@@ -27,13 +28,21 @@
     justify-content: center;
     align-items: center;
     font-size: 35px;
-    font-weight: 800;
+    font-weight: 500;
   }
   &__range {
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
+    &--min--text {
+      color: rgb(71, 8, 228);
+      font-weight: 500;
+    }
+    &--max--text {
+      color: rgb(153, 32, 32);
+      font-weight: 500;
+    }
     > * {
       display: flex;
       flex-direction: column;
@@ -55,12 +64,33 @@
         align-items: center;
       }
     }
+    &--wind--text {
+      font-weight: 500;
+      font-size: 12px;
+      color: rgb(87, 83, 83);
+      text-shadow: 1px 1px 1px #3e3c3c;
+    }
+    &--humidity--text {
+      font-weight: 500;
+      font-size: 12px;
+      color: rgb(87, 83, 83);
+      text-shadow: 1px 1px 1px #3e3c3c;
+    }
+    &--gusts--text {
+      font-weight: 500;
+      font-size: 12px;
+      color: rgb(87, 83, 83);
+      text-shadow: 1px 1px 1px #3e3c3c;
+    }
   }
   &__feels--text {
     font-size: 17px;
   }
-  &__feels--temp {
-    font-size: 23px;
+  &__feels--text {
+    font-weight: 500;
+    font-size: 13px;
+    color: rgb(87, 83, 83);
+    text-shadow: 1px 1px 1px #3e3c3c;
   }
   &__image {
     width: 80%;

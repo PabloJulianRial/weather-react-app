@@ -4,7 +4,15 @@
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  width: 99vw;
-  background-color: rgb(100, 139, 224);
-  border-radius: 15px;
+  width: 100vw;
+  background: linear-gradient(to bottom, #0288d1, #b3e5fc);
+}
+.cloudy {
+  background: linear-gradient(to bottom, #b0bec5, #eceff1);
+}
+.sunny {
+  background: linear-gradient(to bottom, #0288d1, #b3e5fc);
+}
+.patchy {
+  background: linear-gradient(to bottom, #b0bec5, #b3e5fc);
 }

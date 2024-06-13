@@ -13,7 +13,7 @@ const EventCard = ({ artist, date, venue, price }: EventCardProps) => {
       <div className="event-card__head">{artist}</div>
       <div className="event-card__date">{date}</div>
       <div className="event-card__venue">{venue}</div>
-      <div className="event-card__price">£{price}</div>
+      <div className="event-card__price">From £{price}</div>
     </div>
   );
 };

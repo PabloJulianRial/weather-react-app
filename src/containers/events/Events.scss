@@ -3,13 +3,21 @@
   border-radius: 10px;
   height: 100%;
   width: 100%;
-  padding: 0.25rem;
-  overflow: scroll;
-  white-space: nowrap;
+  text-shadow: none;
+  overflow-y: auto;
+  position: relative;
   &__head {
-    margin: 0;
-    margin-bottom: 0.2rem;
-    color: green;
+    line-height: 0.85;
+    font-size: 20px;
+    position: sticky;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    top: 0;
+    background-color: #a2b6e0;
+    z-index: 10;
+    border-bottom: 1px solid rgb(39, 8, 110);
+    font-weight: 300;
+    color: rgb(39, 8, 110);
     text-align: center;
   }
 }

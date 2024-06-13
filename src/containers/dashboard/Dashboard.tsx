@@ -9,7 +9,15 @@ const Dashboard = () => {
   if (!currentWeather || !forecast) {
     return <div>Loading...</div>;
   }
-
+  let backgroundClass = "";
+  const condition = currentWeather.current.condition.text;
+  if (condition.includes("sun") || condition.includes("clear")) {
+    backgroundClass = "sunny";
+  } else if (condition.includes("cloud") || condition.includes("rain")) {
+    backgroundClass = "cloudy";
+  } else {
+    backgroundClass = "patchy";
+  }
   let greeting = "";
   const dayNumber = Number(currentWeather.location.localtime.slice(11, 13));
   if (dayNumber >= 6 && dayNumber < 12) {
@@ -21,7 +29,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className={`dashboard `}>
+    <div className={`dashboard ${backgroundClass}`}>
       <h2 className="dashboard__greeting">
         Good {greeting} {}
       </h2>

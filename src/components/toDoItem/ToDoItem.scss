@@ -7,18 +7,25 @@
     display: flex;
     width: 90%;
     align-items: center;
+    text-shadow: none;
   }
   &__p {
     width: 10%;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 600;
     color: rgb(166, 14, 14);
+    text-shadow: none;
   }
   &__input {
     margin-right: 5px;
+    color: black;
   }
 }
 
 .complete {
   text-decoration: line-through;
+}
+label {
+  color: black;
+  text-shadow: none;
 }
