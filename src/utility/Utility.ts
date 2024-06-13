@@ -1,9 +1,6 @@
 import axios from "axios";
 import { WeatherResponse, ForecastResponse } from "../types/WeatherResponse";
 
-const newLat = 42.0661985;
-const newLon = -3.8504125;
-
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 const baseUrl = "https://api.weatherapi.com/v1/current.json";
@@ -34,7 +31,6 @@ export async function fetchWeatherData(
         // q: `${newLat},${newLon}`,
       },
     });
-    console.log("current>>>>>>>>>>>", response);
 
     return response.data;
   } catch (error) {
