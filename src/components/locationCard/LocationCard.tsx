@@ -1,7 +1,6 @@
 import "./LocationCard.scss";
 import { useWeather } from "../../context/WeatherContext";
 import { getmonthOfTheYear } from "../../utility/Utility";
-import ChangeLocation from "../changeLocation/ChangeLocation";
 import { Link } from "react-router-dom";
 
 const LocationCard = () => {
