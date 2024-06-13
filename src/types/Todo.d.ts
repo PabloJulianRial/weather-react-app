@@ -20,6 +20,7 @@ type Events = {
   _embedded: {
     venues: {
       name: string;
+      postalCode: string;
     }[];
   };
 };

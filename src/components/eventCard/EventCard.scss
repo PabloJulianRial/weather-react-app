@@ -4,13 +4,31 @@
   display: flex;
   flex-direction: column;
   font-size: 15px;
-  border-bottom: 1px solid rgb(82, 82, 206);
+  border-bottom: 2px solid rgb(15, 15, 62);
   &__head {
-    color: rgb(13, 101, 136);
+    font-weight: 600;
+    color: rgb(51, 111, 222);
     text-shadow: none;
+    border-bottom: 1px solid rgb(205, 205, 231);
   }
   &__venue {
     text-shadow: none;
-    color: rgb(96, 44, 155);
+    color: rgb(55, 65, 84);
+    border-bottom: 1px solid rgb(205, 205, 231);
+  }
+  &__date {
+    text-shadow: none;
+    color: rgb(95, 28, 128);
+    border-bottom: 1px solid rgb(205, 205, 231);
+  }
+  &__address {
+    text-shadow: none;
+    color: rgb(95, 28, 128);
+    border-bottom: 1px solid rgb(205, 205, 231);
+  }
+  &__price {
+    text-shadow: none;
+    color: rgb(19, 19, 19);
+    border-bottom: 1px solid rgb(205, 205, 231);
   }
 }

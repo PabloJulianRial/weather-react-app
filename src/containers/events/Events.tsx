@@ -40,7 +40,7 @@ const Events = () => {
             startDateTime: startTime,
             endDateTime: endTime,
             apikey: apiKeyEvents,
-            size: 10,
+            size: 12,
           },
         });
         if (eventsResponse.data._embedded) {
@@ -72,6 +72,7 @@ const Events = () => {
             date={event.dates.start.localDate}
             venue={event._embedded.venues[0].name}
             price={price}
+            address={event._embedded.venues[0].postalCode}
           />
         );
       })}
