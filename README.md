@@ -1,122 +1,143 @@
-Weather Dashboard React App
-Created by Pablo Rial
+# Weather Dashboard React App
+
+Created by [Pablo Rial](https://github.com/PabloJulianRial)
+
+[![Build with Vite](https://img.shields.io/badge/Build%20with-Vite-blueviolet)](https://vitejs.dev/)
+[![Powered by React](https://img.shields.io/badge/Powered%20by-React-61DAFB)](https://reactjs.org/)
+[![Styled with Sass](https://img.shields.io/badge/Styled%20with-Sass-cc6699)](https://sass-lang.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A personal dashboard application built with React that displays the current weather, a 7-day forecast, an interactive map, and a personal to-do list.
 
-➡️ Live Demo ⬅️
-Screenshot
-Suggestion: Add a screenshot of your application here to give visitors a visual preview. Replace the placeholder below.
+### [➡️ Live Demo ⬅️](https://pablojulianrial.github.io/weather-react-app/)
 
-📋 Features
-Real-time Weather: Displays current temperature, conditions, wind speed, and humidity.
+---
 
-7-Day Forecast: Shows the weather forecast for the upcoming week.
+### Screenshot
 
-Change Location: Users can search for and set a new location to view weather data.
+_**Suggestion:** Add a screenshot of your application here to give visitors a visual preview. Replace the placeholder below._
 
-Interactive Map: Utilizes Leaflet to display the selected location on a map.
+![App Screenshot](./src/assets/screenshot.png)
 
-To-Do List: A fully functional to-do list to add and manage personal tasks.
+---
 
-Context API: Uses React Context for efficient state management across components.
+## 📋 Features
 
-Responsive Design: A clean and modern UI that works on various screen sizes.
+- **Real-time Weather:** Displays current temperature, conditions, wind speed, and humidity.
+- **7-Day Forecast:** Shows the weather forecast for the upcoming week.
+- **Change Location:** Users can search for and set a new location to view weather data.
+- **Interactive Map:** Utilizes Leaflet to display the selected location on a map.
+- **To-Do List:** A fully functional to-do list to add and manage personal tasks.
+- **Context API:** Uses React Context for efficient state management across components.
+- **Responsive Design:** A clean and modern UI that works on various screen sizes.
 
-🛠️ Tech Stack & Libraries
-Core: React 18, TypeScript
+---
 
-Build Tool: Vite
+## 🛠️ Tech Stack & Libraries
 
-Routing: React Router DOM
+- **Core:** [React 18](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Routing:** [React Router DOM](https://reactrouter.com/)
+- **API Communication:** [Axios](https://axios-http.com/)
+- **Styling:** [Sass/SCSS](https://sass-lang.com/)
+- **Mapping:** [Leaflet](https://leafletjs.com/)
+- **Deployment:** [GitHub Pages](https://pages.github.com/)
 
-API Communication: Axios
+---
 
-Styling: Sass/SCSS
+## 🚀 Getting Started
 
-Mapping: Leaflet
-
-Deployment: GitHub Pages
-
-🚀 Getting Started
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
-You need to have Node.js (which includes npm) installed on your computer.
+### Prerequisites
 
-npm
+You need to have [Node.js](https://nodejs.org/) (which includes npm) installed on your computer.
 
-Bash
+- **npm**
+  ```sh
+  npm install npm@latest -g
+  ```
 
-npm install npm@latest -g
-Installation
-Clone the repository:
+### Installation
 
-Bash
+1.  **Clone the repository:**
 
-git clone https://github.com/PabloJulianRial/weather-react-app.git
-Navigate to the project directory:
+    ```sh
+    git clone [https://github.com/PabloJulianRial/weather-react-app.git](https://github.com/PabloJulianRial/weather-react-app.git)
+    ```
 
-Bash
+2.  **Navigate to the project directory:**
 
-cd weather-react-app
-Install NPM packages:
+    ```sh
+    cd weather-react-app
+    ```
 
-Bash
+3.  **Install NPM packages:**
 
-npm install
-Set up your Environment Variables:
+    ```sh
+    npm install
+    ```
 
-This project requires an API key from a weather service to fetch data.
+4.  **Set up your Environment Variables:**
 
-Create a .env file in the root of your project.
+    This project requires an API key from a weather service to fetch data.
 
-Add your API key to the .env file like this:
+    - Create a `.env` file in the root of your project.
+    - Add your API key to the `.env` file like this:
+      ```
+      VITE_WEATHER_API_KEY=YOUR_API_KEY_HERE
+      ```
+    - **Note:** You will need to sign up for a weather API service like [OpenWeatherMap](https://openweathermap.org/api) or another provider to get your key.
 
-VITE_WEATHER_API_KEY=YOUR_API_KEY_HERE
-Note: You will need to sign up for a weather API service like OpenWeatherMap or another provider to get your key.
+### Running the App
 
-Running the App
 To run the app in development mode, execute the following command. This will start the Vite development server.
 
-Bash
-
+```sh
 npm run dev
+```
+
 Open http://localhost:5173 (or the address shown in your terminal) to view it in the browser.
 
-🏗️ Build & Deployment
-Building for Production
+## 🏗️ Build & Deployment
+
+### Building for Production
+
 To create a production-ready build of the app, run:
 
-Bash
-
+```bash
 npm run build
-This command bundles your app into static files in the dist directory.
+```
 
-Deploying to GitHub Pages
+This command bundles your app into static files in the `dist` directory.
+
+### Deploying to GitHub Pages
+
 This project is configured to deploy directly to GitHub Pages.
 
 First, run the build command:
 
-Bash
-
+```bash
 npm run build
+```
+
 Then, run the deploy script:
 
-Bash
-
+```bash
 npm run deploy
-This will push the contents of the dist folder to the gh-pages branch of your repository.
+```
 
-📂 Project Structure
+This will push the contents of the `dist` folder to the `gh-pages` branch of your repository.
+
+## 📂 Project Structure
+
 The project is organized into components and containers for modularity and clarity.
 
-src/components: Contains reusable, presentational components (e.g., weatherCard, toDoItem).
+- **src/components**: Contains reusable, presentational components (e.g., `weatherCard`, `toDoItem`).
+- **src/containers**: Contains higher-level components that manage state and logic (e.g., `Dashboard`, `Weather`).
+- **src/context**: Holds the `WeatherContext` for global state management.
+- **src/App.tsx**: The main application component where routing is handled.
 
-src/containers: Contains higher-level components that manage state and logic (e.g., Dashboard, Weather).
+## 📜 License
 
-src/context: Holds the WeatherContext for global state management.
-
-src/App.tsx: The main application component where routing is handled.
-
-📜 License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License – see the `LICENSE.md` file for details.
