@@ -5,21 +5,11 @@ Created by [Pablo Rial](https://github.com/PabloJulianRial)
 [![Build with Vite](https://img.shields.io/badge/Build%20with-Vite-blueviolet)](https://vitejs.dev/)
 [![Powered by React](https://img.shields.io/badge/Powered%20by-React-61DAFB)](https://reactjs.org/)
 [![Styled with Sass](https://img.shields.io/badge/Styled%20with-Sass-cc6699)](https://sass-lang.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A personal dashboard application built with React that displays the current weather, a 7-day forecast, an interactive map, and a personal to-do list.
 
-### [➡️ Live Demo ⬅️](https://pablojulianrial.github.io/weather-react-app/)
-
 ---
 
-### Screenshot
-
-_**Suggestion:** Add a screenshot of your application here to give visitors a visual preview. Replace the placeholder below._
-
-![App Screenshot](./src/assets/screenshot.png)
-
----
 
 ## 📋 Features
 
@@ -138,6 +128,4 @@ The project is organized into components and containers for modularity and clari
 - **src/context**: Holds the `WeatherContext` for global state management.
 - **src/App.tsx**: The main application component where routing is handled.
 
-## 📜 License
 
-This project is licensed under the MIT License – see the `LICENSE.md` file for details.
